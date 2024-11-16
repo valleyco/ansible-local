@@ -1,0 +1,19 @@
+---
+- name: Install basics git vim mc
+  ansible.builtin.apt:
+    name:
+      - gnupg2
+      - apt-transport-https
+      - ca-certificates
+      - software-properties-common
+      - python3-pip
+      - virtualenv
+      - python3-setuptools
+      - gnome-shell-extension-manager
+      - git
+      - mc
+      - vim
+      - curl
+    cache_valid_time: 3600
+    update_cache: true
+    state: present

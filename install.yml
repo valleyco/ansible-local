@@ -1,0 +1,11 @@
+# code: language=ansible
+---
+- name: Install sudo
+  hosts: localhost
+  gather_facts: true
+  become: true
+  roles:
+    - base
+    - chrome
+    - vs_code
+    - docker
