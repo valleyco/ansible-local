@@ -1,4 +1,4 @@
 ---
-- name: Install vidual code
+- name: Install visual code
   ansible.builtin.apt:
     deb: https://go.microsoft.com/fwlink/?LinkID=760868
