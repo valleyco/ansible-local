@@ -1,0 +1,7 @@
+---
+- name: Install zed
+  become: false
+  ansible.builtin.shell:
+    executable: /bin/bash
+    cmd: set -o pipefail && curl -f https://zed.dev/install.sh | sh
+    creates: "~/.local/bin/zed"
