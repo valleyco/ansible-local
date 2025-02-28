@@ -1,0 +1,2 @@
+alias tpa='~/Projects/techpartnersny/toolbox.sh'
+alias venv='source ./.venv/bin/activate'

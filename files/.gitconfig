@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = master
+[user]
+	email = levydav@gmail.com
+	name = David Levy
+[push]
+	autoSetupRemote = true
