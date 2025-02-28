@@ -1,12 +1,19 @@
 # code: language=ansible
 ---
-- name: Install sudo
+- name: Install applications
   hosts: localhost
   gather_facts: true
   become: true
   roles:
     - base
+    - bash
     - chrome
     - vs_code
     - docker
-    - zed
+    - yt-dlp
+- name: Install configurations
+  hosts: localhost
+  roles:
+    - bash
+  tags:
+    - configuration

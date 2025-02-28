@@ -1,2 +1,3 @@
 #!/bin/bash
-ansible-playbook  --extra-vars "username=$USER" -K install.yml
+source .venv/bin/activate
+ansible-playbook  --extra-vars "username=$USER" -K install.yml "$@"

@@ -1,0 +1,15 @@
+- name: Create dest folder
+  ansible.builtin.file:
+    path: "{{ dest }}/{{ item['folder'] | replace('~','home') | dirname }}"
+    state: directory
+    mode: "0740"
+  loop: "{{ backup_folders }}"
+
+- name: Archive folders
+  community.general.archive:
+    path: "{{ item['folder'] }}"
+    dest: "{{ dest }}/{{ item['folder'] | replace('~','home') }}.tar.gz"
+    mode: "0600"
+    format: "{{item['format']}}"
+  loop: "{{ backup_folders }}"
+

@@ -1,0 +1,9 @@
+# code: language=ansible
+---
+- name: Archive data
+  hosts: localhost
+  gather_facts: true
+  vars_files:
+    - vars/backup.yml
+  roles:
+    - backup

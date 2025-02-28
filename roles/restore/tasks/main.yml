@@ -1,0 +1,5 @@
+- name: Restore
+  ansible.builtin.unarchive:
+    src: "{{ dest }}/{{ item['folder'] | replace('~','home') }}.tar.gz"
+    dest: "{{ item['folder'] | dirname }}"
+  loop: "{{ backup_folders }}"

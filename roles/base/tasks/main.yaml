@@ -1,5 +1,5 @@
 ---
-- name: Install basics git vim mc
+- name: Install apt based packages
   ansible.builtin.apt:
     name:
       - gnupg2
@@ -16,6 +16,11 @@
       - vim
       - wireguard
       - curl
+      - notepadqq
+      - ffmpeg
+      - normalize-audio
+      - wodim # cdrecord
+      - vlc
     cache_valid_time: 3600
     update_cache: true
     state: present

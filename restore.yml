@@ -1,0 +1,10 @@
+# code: language=ansible
+---
+- name: Restore archive data
+  hosts: localhost
+  gather_facts: true
+  vars_files:
+    - vars/backup.yml
+  roles:
+    - restore
+    

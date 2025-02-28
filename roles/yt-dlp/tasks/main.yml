@@ -1,0 +1,12 @@
+- name: Ensure local bin exists
+  ansible.builtin.file:
+    path: ~/.local/bin
+    state: directory
+    mode: "0755"
+
+- name: Install yt-dlp
+  become: false
+  ansible.builtin.get_url:
+    url: 'https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp '
+    dest: ~/.local/bin/yt-dlp
+    mode: "0755"

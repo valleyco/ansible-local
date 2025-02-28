@@ -1,0 +1,15 @@
+- name: Install bash git prompt script
+  ansible.builtin.blockinfile:
+    path: ~/.bashrc
+    insertafter: EOF
+    block: "{{ lookup('ansible.builtin.file', 'bash_git_prompt') }}"
+    append_newline: true
+
+- name: Install bash aliases
+  ansible.builtin.blockinfile:
+    create: true
+    mode: "0644"
+    path: ~/.bash_aliases
+    insertafter: EOF
+    block: "{{ lookup('ansible.builtin.file', 'bash_aliases') }}"
+    append_newline: true
