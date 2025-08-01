@@ -1,16 +1,17 @@
     backup_folders:
       - folder: ~/.ssh
         format: gz
-      # - folder: ~/Documents 
-      #   format: gz
-      # - folder: ~/Downloads
-      #   format: tar
-      # - folder: ~/Desktop
-      #   format: gz
-      # - folder: ~/Pictures
-      #   format: tar
-      # - folder: ~/Music
-      #   format: tar
+      - folder: ~/Documents 
+        format: gz
+      - folder: ~/Downloads
+        format: tar
+      - folder: ~/Desktop
+        format: gz
+      - folder: ~/Pictures
+        format: tar
+      - folder: ~/Music
+        format: tar
       - folder: ~/Videos
         format: tar  
-    dest: /media/davidl/DCC21FBCC21F99BA/backup
+    dest: /media/davidl/DATA/backup
+    

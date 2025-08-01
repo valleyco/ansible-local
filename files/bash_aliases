@@ -1,2 +1,3 @@
 alias tpa='~/Projects/techpartnersny/toolbox.sh'
 alias venv='source ./.venv/bin/activate'
+alias esp='source ~/esp/esp-idf/export.sh' 
